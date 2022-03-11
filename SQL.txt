@@ -1,0 +1,14 @@
+insert into [starwars_all_canon_data]
+select * from [starwars_all_canon_data_1.pickle]  union
+select * from [starwars_all_canon_data_2.pickle]  union
+select * from [starwars_all_canon_data_3.pickle]  union
+select * from [starwars_all_canon_data_4.pickle]  union
+select * from [starwars_all_canon_data_5.pickle]  union
+select * from [starwars_all_canon_data_6.pickle] 
+
+
+WITH a AS (SELECT  REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(value,'''',''),' ',''),'[',''),']',''),'%',''),'-',''),'_','') Crosslinks
+           FROM tbl_StarWars_Canon CROSS APPLY STRING_SPLIT(Crosslinks, ','))
+INSERT INTO tbl_StarWars_Crosslinks (Crosslink)
+SELECT DISTINCT Crosslinks FROM a
+

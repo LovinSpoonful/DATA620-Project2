@@ -1,0 +1,101 @@
+{'Biographical information': 
+    {'Homeworld': "Yoda's homeworld", 
+     'Born': '896 BBY',  
+     'Died': ['4 ABY', 'Dagobah']}, 
+     'Physical description': 
+         {'Species': "Yoda's species", 
+          'Gender': 'Male', 
+          'Height': '0.66 meters', 
+          'Mass': '13 kilograms', 
+          'Hair color': 'White', 
+          'Eye color': 'Green-gold', 
+          'Skin color': 'Green'}, 
+     'Chronological and political information': 
+         {'Affiliation(s)': ['Jedi Order', 'Jedi High Council', 'Galactic Republic', 'Grand Army of the Republic'], 
+          'Masters': ["Yoda's old Master", 'Garro', 'Qui-Gon Jinn'], 
+          'Apprentices': ['Lula Talisola', 'Dooku', 'Cin Drallig', 'Mace Windu', 'Obi-Wan Kenobi', 'Luke Skywalker', 'Anakin Skywalker']}}
+
+
+{'Physical description': 
+    {'Species': 'Human', 
+     'Gender': 'Female', 
+     'Hair color': 'Dark brown', 
+     'Eye color': 'Brown', 
+     'Skin color': 'Light'}, 
+'Chronological and political information': 
+     {'Affiliation(s)': ['Galactic Empire', 'Imperial Academy', 'Ninety-Sixth Task Force', '7th Fleet', 'Eleventh Fleet'], 
+      'Masters': 'Thrawn '}}
+
+
+
+-- 1211 dates:
+SELECT * FROM [CUNY].[dbo].[tbl_StarWars_Canon]
+  where  Sidebar like '%Date%'  order by Sidebar  
+
+--1811 places:
+SELECT * FROM [CUNY].[dbo].[tbl_StarWars_Canon]
+  where  Sidebar like '%Astrographical%'  
+   order by Sidebar  
+
+
+ObjectName: Jakku
+{'Astrographical information': 
+  {'Region': ['Western Reaches', 'Inner Rim'], 
+   'System': 'Jakku system', 
+   'Suns': '1', 
+   'Orbital position': 'First from the sun', 
+   'Moons': '2', 
+   'Grid coordinates': 'I-13', 
+   'Trade routes': "Burke's Trailing", 
+   'Rotation period': '26.8 standard hours', 
+   'Orbital period': ['352 standard days', '315 local days']
+  }, 
+ 'Physical information': 
+   {'Diameter': ['6', '400 kilometers'], 
+    'Atmosphere': 'Type I ', 
+    'Climate': 'Arid; hot days with cold nights', 
+    'Primary terrain': ['Modern:Deserts', 'Historic:Forests'], 
+    'Points of interest': ['Anchorite habit house', 'Carbon Ridge', "Ergel's Bar", 'Fallen Teeth', "Feressee's Point", 'Goazon Badlands', 'Imperial research base', 'Kelvin Ravine', 'Kelvin Ridge', 'Main Imperial base', "Namenthe's Crater", 'Niima Outpost', "Old Meru's", 'Orkoon Hub', "Pilgrim's Road", 'Plaintive Hand plateau', 'Sinking Fields', 'Starship Graveyard'], 
+    'Flora': 'Tuanulberry bush', 
+    'Fauna': ['Bloggin', 'Cricket', 'Gnaw-jaw', 'Happabore', 'Luggabeast', 'Nightwatcher worm', 'Pole-snake', 'Ripper-raptor', 'Skittermice', 'Steelpecker', 'Thissermount', 'Vworkka']
+   },
+ 'Societal information': 
+   {'Native species': ['Teedo', 'Uthuthma'], 
+    'Immigrated species': ['Abednedo', 'Crolute', 'Human', 'Hutt', 'Kyuzo', 'Melitto', 'Nu-Cosian', 'Dybrinthe'], 
+    'Primary language(s)': ['Galactic Basic', 'Hideo', 'Teedospeak', 'Uthuthma'], 
+    'Population': 'Unknown ', 
+    'Demonym': 'Jakkuvian', 
+    'Major cities': ['Blowback Town', 'Cratertown', 'Niima Outpost', 'Reestkii', 'Tuanul'], 
+    'Major imports': ['Foodstuffs', 'Luxury goods', 'Technology', 'Water'], 
+    'Major exports': ['Bezorite', 'Junk metal', 'Kesium gas', 'Magnite', 'Osmiridium', 'Salvaged tech', 'Silicon'], 
+    'Affiliation': ['Galactic Empire', 'First Order']
+   }
+}
+
+
+AND (Paragraph NOT LIKE '%was%planet%') AND (Paragraph NOT LIKE '%was%astronomical object%') AND (Paragraph NOT LIKE '%was%astronomical body%') AND (Paragraph NOT LIKE '%was%nebula%') AND 
+                (Paragraph NOT LIKE '%was%star system%') AND (Paragraph NOT LIKE '%was%world%') AND (Paragraph NOT LIKE '%was%sector%')
+
+
+
+
+
+https://en.wikipedia.org/wiki/List_of_Star_Wars_planets_and_moons
+https://github.com/fgeorges/star-wars-dataset/blob/master/data/star-wars-dataset.ttl
+planet description2 came from https://screenrant.com/star-wars-rogue-one-planets-ranked-jedha-scarif-tatooine/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
